@@ -1,0 +1,18 @@
+<!-- in views/bookmarks/index.erb -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Bookmarks</title>
+    <link rel="stylesheet" href="<%= url('/stylesheets/sheet.css') %>">
+  </head>
+  <body>
+    <h2>Bookmarks</h2>
+    <ul>
+      <% @bookmarks.each do |bookmark| %>
+        <li><%= bookmark %></li>
+        <br>
+      <% end %>
+    </ul>
+  </body>
+</html>
