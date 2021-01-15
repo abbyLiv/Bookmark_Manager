@@ -10,3 +10,8 @@ User story 2:
 As a time-pressed user
 So that I can save a website
 I would like to add the site’s address and title to bookmark manager.
+
+User story 3:
+As a user
+So I can store bookmark data for later retrieval
+I want to add a bookmark to Bookmark Manager
