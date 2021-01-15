@@ -1,15 +1,12 @@
-
-
 describe Bookmark do
-  describe '.all' do
-    it 'returns all bookmarks' do
-      connection = PG.connect(dbname: 'bookmark_manager_test')
+  describe '.create' do
+    it 'creates a new bookmark' do
+      bookmark = Bookmark.create(url: 'http://www.testbookmark.com', title: 'Test Bookmark')
 
-      bookmarks = Bookmark.all
-
-      expect(bookmarks).to include('http://www.makersacademy.com')
-      expect(bookmarks).to include('http://www.destroyallsoftware.com')
-      expect(bookmarks).to include('http://www.google.com')
+      expect(bookmark).to be_a Bookmark
+      expect(bookmark.id).to be_a Integer
+      expect(bookmark.title).to eq 'Test Bookmark'
+      expect(bookmark.url).to eq 'http://www.testbookmark.com'
     end
   end
 end
